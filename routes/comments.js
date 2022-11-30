@@ -1,8 +1,8 @@
 const express = require("express");
-const { exists } = require("../schemas/comment");
+const { exists } = require("../schemas/Comment");
 const router = express.Router();
-const Comment = require("../schemas/comment");
-const { collection } = require("../schemas/post");
+const Comment = require("../schemas/Comment");
+const { collection } = require("../schemas/Post");
 // const Post = require("../schemas/Post"); 
 
 

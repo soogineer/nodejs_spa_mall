@@ -1,7 +1,7 @@
 const express = require("express");
-const { exists } = require("../schemas/post");
+const { exists } = require("../schemas/Post");
 const router = express.Router();
-const Post = require("../schemas/post");
+const Post = require("../schemas/Post");
 
 // 게시글 작성 API
 router.post("/", async (req, res) => {
@@ -39,7 +39,6 @@ res.json({
 // 게시물 상세조회 API
 router.get("/:_postId", async (req, res) => {
   const {_postId} = req.params
-
   const posts = await Post.find({_id: _postId})
   
   if (posts.length === 0){
@@ -120,3 +119,4 @@ router.get("/:_postId", async (req, res) => {
 });
   
 module.exports = router;  
+

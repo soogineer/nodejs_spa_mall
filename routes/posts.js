@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
   }
 
     await Post.create({title : req.body.title, content: req.body.content, password: req.body.password, user: req.body.user});
-    res.json({message : '성공'});
+    res.json({message : '게시글을 생성하였습니다'});
 
   });
 
